@@ -5,3 +5,15 @@
 body {
     @apply bg-slate-900 text-slate-300 h-screen grid place-content-center text-2xl;
 }
+
+.primary{
+    @apply bg-blue-600 text-blue-100 h-20 w-44
+}
+
+.secondary{
+    @apply bg-yellow-600 text-yellow-100 h-20 w-44
+}
+
+.ghost{
+    @apply border border-pink-300 h-20 w-48 text-white
+}

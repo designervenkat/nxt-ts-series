@@ -3,8 +3,9 @@
 // import Card from "./components/context/theme-context/Card"
 // import { ThemeContextProvider } from "./components/context/theme-context/ThemeContext"
 
-import ComponentPros from "./components/componentProps/ComponentPros"
-import Profile from "./components/componentProps/Profile"
+
+import { CustomButton } from "./components/html/Button"
+import Card from "./components/html/Card"
 
 function App() {
   
@@ -21,8 +22,19 @@ function App() {
     </AuthContextProvider> */}
 
 
-    <ComponentPros isLoggedIn={true} component={Profile}/>
+  
+
+
+        <Card />
+
+           <CustomButton variants="secondary" onClick={() => console.log("Clicked from App tsx")}>
+       CLicked
+    </CustomButton>
+
+
     </>
+
+   
 
    )
 }
