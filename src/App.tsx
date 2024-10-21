@@ -1,35 +1,37 @@
-// import Auth from "./components/context/auth-context/Auth"
-// import { AuthContextProvider } from "./components/context/auth-context/AuthContext"
-// import Card from "./components/context/theme-context/Card"
-// import { ThemeContextProvider } from "./components/context/theme-context/ThemeContext"
-
-
-import { CustomButton } from "./components/html/Button"
-import Card from "./components/html/Card"
+import { ResuableLists } from "./components/generics/ResuableList"
+import { PassNumber } from "./components/restrictions-num/Number"
 
 function App() {
-  
+    const superHeros = [
+        {firstName: "Superman", lastName: "Clark", age: 20}
+    ]
 
    return (
     <>
-    {/* <ThemeContextProvider>
-        <Card />
-    </ThemeContextProvider>
-
     
-    <AuthContextProvider>
-        <Auth />
-    </AuthContextProvider> */}
+   
+
+    {/* List countries  */}
+    <ResuableLists 
+        items={["India", "US", "China"]} // Array of strings[]
+        onClick={(item) => console.log(item)
+    }/>
 
 
-  
+    {/* List year  */}
+    <ResuableLists 
+        items={[2001, 2002, 2004]} // Array of number[]
+        onClick={(item) => console.log(item)
+    }/>
 
 
-        <Card />
+    {/* Products key value pair {key-name} */}
+    <ResuableLists 
+        items={superHeros} // Array of objects[{ key | value }]
+        onClick={(item) => console.log(item)
+    }/>
 
-           <CustomButton variants="secondary" onClick={() => console.log("Clicked from App tsx")}>
-       CLicked
-    </CustomButton>
+
 
 
     </>
